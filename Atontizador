@@ -1,0 +1,13 @@
+#Guardamos una palabra y la deletreamos
+
+def atontizador():
+    palabra=raw_input("Dime una palabra con muchas vocales: ")
+    for cont in range(0,8):
+        if(palabra[cont]=='A' or palabra[cont]=='E' or palabra[cont]=='I' or palabra[cont]=='O' or palabra[cont]=='U'):
+            print('U')
+        else:
+            print(palabra[cont])
+   
+
+   
+atontizador()
