@@ -1,0 +1,15 @@
+def atontizador():
+    palabra=raw_input("Dime una palabra con muchas vocales: ")
+    longitud=len(palabra)#Lee el número de letras de la palabra 
+    for cont in range(0,longitud):
+        if(palabra[cont]=='A' or palabra[cont]=='E' or palabra[cont]=='I' or palabra[cont]=='O' or palabra[cont]=='U'):
+            print('U')
+        else:
+            print(palabra[cont])
+
+
+    print(palabra)
+   
+
+   
+atontizador()
