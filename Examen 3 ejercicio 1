@@ -1,0 +1,24 @@
+# Este programa sirve para invertir una palabra y realizar un cambio de letras
+def programa():
+    seguir = True
+    while seguir == True:
+        palabra = raw_input("Dime una palabra: ")  # Usar raw_input en lugar de input en Python 2
+        inversa = ""
+        
+        # Generar la palabra invertida
+        for cont in range(len(palabra) - 1, -1, -1):
+            inversa += palabra[cont]
+        
+        # Crear las tablas de entrada y salida para la traducción
+        entrada = "abcdefghijklmnñopqrstuvwxyz"
+        salida = "AbcdEfghIjklmnñOpqrstUvwxyz"
+        
+        # Usar string.maketrans en lugar de str.maketrans en Python 2
+        import string
+        cambio = string.maketrans(entrada, salida)
+        
+        # Aplicar la traducción a la palabra invertida
+        print("Palabra invertida: " + inversa.translate(cambio))
+
+# Llamar al programa
+programa()
